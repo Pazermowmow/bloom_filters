@@ -9,10 +9,10 @@ class BloomFilterBase(abc.ABC):
         # - The number of hashes to use when adding and querying the bloom filter.
         # Additionally, we need to initialise the bit vector (a bytearray).
 
-        self.size = size
-        self.nhash = nhash
-        self.nbytes = (size + 7) // 8
-        self.bit_vector = bytearray(self.nbytes)
+        self.size = ...
+        self.nhash = ...
+        self.nbytes = ...
+        self.bit_vector = ...
 
     def blanks (self) -> int:
         func = lambda b:sum(0 if b & pow(2,bx) else 1 for bx in range(8))
@@ -32,13 +32,12 @@ class BloomFilterBase(abc.ABC):
     def __str__ (self) -> str:
         return self.vector_to_bits()
 
-    @abc.abstractmethod
-    def add(self, item: str):
-        ...
+    # TODO - Define the abstract methods `query` and `add` to be used by our concrete implementations.
+    # @abc.abstractmethod
+    # def add(self, ...): ...
 
-    @abc.abstractmethod
-    def query(self, item: str) -> bool:
-        ...
+    # @abc.abstractmethod
+    # def query(self, ...): ...
 
-    @abc.abstractmethod
-    def union(self, other: 'BloomFilterBase') -> 'BloomFilterBase': ...
+    # @abc.abstractmethod
+    # def union(self, ...): ...
