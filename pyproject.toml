@@ -1,0 +1,14 @@
+[project]
+name = "bloom-filters"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = ["english_words"]
+
+[tool.pytest.ini_options]
+markers = [
+    "core: minimal set of tests for kata development feedback",
+    "opt_core: minimal set of tests for the optimized bloom filter kata development feedback",
+    "perf: a set of tests for benchmarking and performance feedback between bloom filter implementations",
+]

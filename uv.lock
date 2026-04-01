@@ -1,0 +1,23 @@
+version = 1
+revision = 3
+requires-python = ">=3.12"
+
+[[package]]
+name = "bloom-filters"
+version = "0.1.0"
+source = { virtual = "." }
+dependencies = [
+    { name = "english-words" },
+]
+
+[package.metadata]
+requires-dist = [{ name = "english-words" }]
+
+[[package]]
+name = "english-words"
+version = "2.0.2"
+source = { registry = "https://pypi.org/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/8e/95/12d90f2a3af18305b13d7c09401b59bd235db4cfb63d76ddf594748c2de8/english-words-2.0.2.tar.gz", hash = "sha256:e51d05607fe92ebf65047a2359e977c78a46aa16d1d92a3cba0bac3e34957d8e", size = 8152008, upload-time = "2025-08-14T21:56:27.884Z" }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/90/6f/42700113073ca6775fb12a260112f0cb36449a2c2e42dcd53d3fcc6970b4/english_words-2.0.2-py3-none-any.whl", hash = "sha256:a65b900b17201526d8ab2d414f45e5a37afc714a1857377b30182c754ae6e0d6", size = 8196368, upload-time = "2025-08-14T21:56:24.865Z" },
+]
